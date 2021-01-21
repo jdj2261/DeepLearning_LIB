@@ -49,7 +49,7 @@ class file_processing():
         print('file copy success.')
 
 if __name__ == '__main__':
-    path = '/home/djjin/Desktop/Test'
+    path = '/home/djjin/Test' # 폴더가 있어야 함.
     mv_path = '/home/djjin/Mywork/yolo/Yolo_mark/x64/Release/data/img'
 
     f = file_processing(path=path ,move_path = mv_path)
