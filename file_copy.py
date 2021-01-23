@@ -24,7 +24,7 @@ class file_processing():
             file_list = glob.glob(path + '/**/*' + type, recursive=True)
         
         else:
-            file_list = glob.glob(path + '/*.jpg')
+            file_list = glob.glob(path + '/**/*.jpg')
         
         print('>>> file list')
         for file in file_list:
