@@ -5,7 +5,7 @@ from tqdm import tqdm # pip3 install tqdm
 
 image_folder = '/home/djjin/Test'
 video_name = 'video.avi'
-frame = 20
+frame = 2
 
 def img2video(img_path, video_name, frame):
 
