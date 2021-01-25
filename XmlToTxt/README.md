@@ -10,6 +10,7 @@ sudo pip install -r requirements.txt
 
 ```bash
 python xmltotxt.py -c cls.txt -xml xml -out out
+python xmltotxt.py  -xml ~/Test/merge -out out
 ```
 #### Mandatory arguments
 
