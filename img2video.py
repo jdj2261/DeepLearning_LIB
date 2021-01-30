@@ -3,9 +3,9 @@ import os
 import natsort # pip3 install natsort
 from tqdm import tqdm # pip3 install tqdm
 
-image_folder = '/home/djjin/Test'
-video_name = 'video.avi'
-frame = 2
+image_folder = '/home/djjin/Mygit/My_Python_LIB/ETRI/img_test'
+video_name = 'video3.avi'
+frame = 1
 
 def img2video(img_path, video_name, frame):
 

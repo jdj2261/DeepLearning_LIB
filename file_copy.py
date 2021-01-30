@@ -1,5 +1,7 @@
 import glob
 import shutil as sh
+import os
+import argparse
 
 class file_processing():
     def __init__(self, **kwargs):
@@ -49,11 +51,25 @@ class file_processing():
         print('file copy success.')
 
 if __name__ == '__main__':
-    path = '/home/djjin/Test/merge' # 폴더가 있어야 함.
-    mv_path = '/home/djjin/Mywork/img2label/Yolo_mark/x64/Release/data/img'
+
+    parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)
+    '''
+    Command line options
+    '''
+    parser.add_argument(
+        '-co', '--copy', type=str, required=False, nargs='+',
+        help='--copy current_path desired_path'
+    )
+
+    FLAGS = parser.parse_args()
+    input_list = FLAGS.copy
+    path = input_list[0]
+    mv_path = input_list[1]
+    # path = '/home/djjin/Test/merge' # 폴더가 있어야 함.
+    # mv_path = '/home/djjin/Mywork/img2label/Yolo_mark/x64/Release/data/img'
 
     f = file_processing(path=path ,move_path = mv_path)
     f.find_file_path_lv1()
     f.find_file_path()
     #f.file_move(mv_path)
-    f.file_copy(mv_path)
+    # f.file_copy(mv_path)
