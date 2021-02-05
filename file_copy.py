@@ -1,54 +1,81 @@
 import glob
+from os.path import dirname
 import shutil as sh
 import os
+import natsort
 import argparse
 
+"""
+To do...
+1. 파일이 이미 존재 하는 경우
+2. 확장자
+"""
 class file_processing():
-    def __init__(self, **kwargs):
-        if 'path' in kwargs.keys(): 
-            self.path = kwargs['path'] 
-        else: 
-            self.path = None
+    def __init__(self, cur_path, tar_path, file_type):
+        self.cur_path = cur_path
+        self.tar_path = tar_path
+        self.file_type = file_type
+        self.file_list = []
 
-    def find_file_path_lv1(self):
-        ### 대상 파일 경로 확인 ###
-        file_list = glob.glob(path + '/*')
+    # 디렉토리 확인 
+    def find_directories(self):
+        cur_file_list = os.listdir(self.cur_path)
+        print("current path : {}".format(self.cur_path))
 
-        print('>>> file list lv1')
-        for file in file_list:
-            print(file)
-        print('=' * 40)
-    
-    def find_file_path(self, **kwargs):
-        ### 대상 파일 경로 확인 ###
-        if 'type' in kwargs.keys():
-            type = '.' + kwargs['type']
-            file_list = glob.glob(path + '/**/*' + type, recursive=True)
-        
+        directory_list = []
+        for directory in cur_file_list:
+            if os.path.isdir(self.cur_path+'/'+directory):
+                print("Directory : {}".format(self.cur_path+'/'+directory))
+                directory_list.append(directory)
+
+        if directory_list:
+            print('==> There are found {} directories.'.format(len(directory_list)))
         else:
-            file_list = glob.glob(path + '/**/*.jpg')
-        
+            print('There is no directory...')
+        print('=' * 40)
+
+    # 파일 확인
+    def find_files(self):
+
+        print(self.file_type)
+        file_list = glob.glob(self.cur_path + '*/*'+self.file_type)
+        print(self.cur_path + '*/*'+self.file_type)
+        natsorted_files = natsort.natsorted(file_list,reverse=False)
+
         print('>>> file list')
-        for file in file_list:
+        for file in natsorted_files:
             print(file)
         print('=' * 40)
-        self.file_list =  file_list
+        print('==> There are found {} files.'.format(len(natsorted_files)))
+        print('=' * 40)
+        self.file_list = natsorted_files
 
-    def file_move(self, move_path):
-        ### 대상 파일 이동 ###
+    # 파일 복사
+    def file_copy(self):
+
+        # print(self.file_list)
         for file in self.file_list:
-            file_name = file.split('\\')[-1] # file_name = 파일명.type
-            sh.move(file ,move_path + '/' + file_name)
+            # file_name = file.split('\\')[-1] # file_name = 파일명.type
+            sh.copy(file, self.tar_path)
 
-        print('file move success.')
+        tar_file_list = glob.glob(self.tar_path+'*/*' + self.file_type)
+        tar_natsorted_files = natsort.natsorted(tar_file_list,reverse=False)
+        for cp_file in tar_natsorted_files:
+            print("Copied.... >>> {}".format(cp_file))
 
-    def file_copy(self, copy_path):
-        ### 대상 파일 복사 ###
-        for file in self.file_list:
-            file_name = file.split('\\')[-1] # file_name = 파일명.type
-            sh.copy(file ,copy_path)
-
+        print('=' * 40)
+        print('==> There are found {} files.'.format(len(tar_natsorted_files)))
+        print('=' * 40)
         print('file copy success.')
+
+    # 파일 이동
+    def file_move(self):
+
+        for file in self.file_list:
+            try:
+                sh.move(file, self.tar_path )
+            except sh.Error as e:
+                print(e)
 
 if __name__ == '__main__':
 
@@ -57,19 +84,37 @@ if __name__ == '__main__':
     Command line options
     '''
     parser.add_argument(
-        '-co', '--copy', type=str, required=False, nargs='+',
-        help='--copy current_path desired_path'
+        '-cp', '--copy', type=str, required=False, nargs='+',
+        help='--copy current_path desired_path type'
     )
 
-    FLAGS = parser.parse_args()
-    input_list = FLAGS.copy
-    path = input_list[0]
-    mv_path = input_list[1]
-    # path = '/home/djjin/Test/merge' # 폴더가 있어야 함.
-    # mv_path = '/home/djjin/Mywork/img2label/Yolo_mark/x64/Release/data/img'
+    parser.add_argument(
+        '-mv', '--move', type=str, required=False, nargs='+',
+        help='--move current_path desired_path type'
+    )
 
-    f = file_processing(path=path ,move_path = mv_path)
-    f.find_file_path_lv1()
-    f.find_file_path()
-    #f.file_move(mv_path)
-    # f.file_copy(mv_path)
+    args = parser.parse_args()
+    isCopy = False
+
+    if "copy" in args:
+        input_list = args.copy
+        isCopy = True
+    elif "move" in args:
+        input_list = args.move
+
+    cur_path = input_list[0]
+    tar_path = input_list[1]
+
+    if len(input_list) > 2:
+        file_type = input_list[2]
+    else:
+        file_type = '*'
+    file_type = '.' + file_type
+    f = file_processing(cur_path=cur_path ,tar_path = tar_path, file_type = file_type)
+    f.find_directories()
+    f.find_files()
+    if isCopy:
+        f.file_copy()
+    else:
+        f.file_move()
+

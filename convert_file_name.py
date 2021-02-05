@@ -7,7 +7,7 @@ import argparse
 # change_name ='traffic_test_'
 
 def changeName(path, beforeName, afteName, file_type):
-    cName_cnt = 0
+    cName_cnt = 8100
     file_list = os.listdir(path)
     natsorted_files = natsort.natsorted(file_list,reverse=False)
 
