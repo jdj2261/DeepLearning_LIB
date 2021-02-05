@@ -45,9 +45,9 @@ if __name__ == "__main__":
         help='--type jpg, txt, png ...'
     )
 
-    FLAGS = parser.parse_args()
-    path = ''.join(FLAGS.change)
-    before_file_name = ''.join(FLAGS.before)
-    after_file_name = ''.join(FLAGS.after)
-    input_type = '.'+''.join(FLAGS.type)
+    args = parser.parse_args()
+    path = ''.join(args.change)
+    before_file_name = ''.join(args.before)
+    after_file_name = ''.join(args.after)
+    input_type = '.'+''.join(args.type)
     changeName(path, before_file_name, after_file_name, input_type)

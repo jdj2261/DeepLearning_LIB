@@ -9,7 +9,7 @@ def crop_video(*input):
     start_time = '00:00:00'
     end_time = '00:03:10'
     output_file = '/home/djjin/Videos/output1.mp4'
-        """
+    """
     if len(input) != 4:
         print(str)
         return
