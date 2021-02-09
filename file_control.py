@@ -5,11 +5,7 @@ import os
 import natsort
 import argparse
 
-"""
-To do...
-1. 파일이 이미 존재 하는 경우
-2. 확장자
-"""
+
 class file_processing():
     def __init__(self, cur_path, tar_path, file_type):
         self.cur_path = cur_path
@@ -95,6 +91,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     isCopy = False
+
+    input_list = []
 
     if "copy" in args:
         input_list = args.copy

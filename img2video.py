@@ -24,10 +24,7 @@ def img2video(*input):
     video_name  = input[1] 
     frame       = int(input[2])
 
-    print(img_path, video_name, frame)
-
     file_list = os.listdir(img_path)
-    print(file_list)
     natsorted_test = natsort.natsorted(file_list,reverse=False)
 
     images = [img for img in natsorted_test if img.endswith(".jpg")]
