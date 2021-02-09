@@ -22,7 +22,7 @@ def changeName(path, cName):
             os.rename(path+filename, path+str(cName)+str(i).zfill(6)+'.txt')
             i += 1
 
-# changeName(path, change_name)
+changeName(path, change_name)
 
 def make_train_file(path):
     file_list = os.listdir(path)
