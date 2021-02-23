@@ -53,7 +53,6 @@ def make_train_file(path):
                     result_list.append(test.replace('txt','jpg ') + ','.join(data).rstrip())
     print("red: {}, green: {}".format(red_count, green_count))
 
-
     with open(path+'../train.txt', 'w') as train_file:
         for file in result_list:
             train_file.write(file + "\n") 

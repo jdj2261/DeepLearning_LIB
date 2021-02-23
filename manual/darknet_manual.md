@@ -50,7 +50,7 @@ ubuntu 18.04 환경에서 darknet을 이용하여 Custom data를 학습시켜보
 
 다운로드 바로가기 : [traffic-light-dataset(20GB)](https://www.acelab.org/traffic-light-dataset)
 
-![image-dataset](img/image-dataset.png)
+![image-dataset](images/image-dataset.png)
 
 - 라벨링 툴 다운로드
 
@@ -96,7 +96,7 @@ backup = backup/
 
 ---
 
-- 모델 구조 및 train 과 관련된 설정이 들어있는 파일
+- 모델 구조 및 train 과 관련된	 설정이 들어있는 파일
 - batch 및 subdivisions 사이즈(Cuda Memory 관련), width 및 height 사이즈(입력 값 및 성능 관련)
 - augmentation(angle, saturation, exposure, hue) 설정
 - learning rate, burn_in, max_batches, policy, steps, scales 설정
@@ -116,11 +116,11 @@ esc키 누르고 :/yolo 입력
 N을 누르면 yolo가 적힌 줄로 이동한다.
 ~~~
 
-![image-cfg](img/cfg1.png)
+![image-cfg](images/cfg1.png)
 
-![image-cfg2](img/cfg2.png)
+![image-cfg2](images/cfg2.png)
 
-![image-cfg3](img/cfg3.png)
+![image-cfg3](images/cfg3.png)
 
 ### obj.names
 
