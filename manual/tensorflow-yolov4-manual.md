@@ -117,13 +117,15 @@ custom : __C.YOLO.CLASSES = "./data/classes/obj.names"
   $ python detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --image ./data/kite.jpg
   ~~~
 
+  <img src="result-int8.png" align="left" alt="image-20210223131041965" style="zoom: 50%;" />
+
   - Custom 데이터
 
     ~~~
-    $ python detectvideo.py --weights ./checkpoints/yolov4-416-test --size 416 --model yolov4 --video ~/Videos/dwelling.mp4 
+    $ python detect.py --weights ./checkpoints/yolov4-416-test --size 416 --model yolov4 --image ./data/traffic_light.jpg
     ~~~
 
-    
+    <img src="result.png" align="left" alt="image-20210223131010541" style="zoom: 33%;" />
 
 
 ---
