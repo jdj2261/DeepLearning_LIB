@@ -136,7 +136,7 @@ custom : __C.YOLO.CLASSES = "./data/classes/obj.names"
   $ python detectvideo.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video ./data/road.mp4
   ~~~
 
-  <img src="images/tensorflow-yolov4-output.png" alt="image-20210222161048521" align="left" style="zoom:67%;" />
+  <img src="images/tensorflow-yolov4-ouput2.png" alt="image-output" align="left" style="zoom:67%;" />
 
   - Custom 데이터
 
@@ -144,7 +144,7 @@ custom : __C.YOLO.CLASSES = "./data/classes/obj.names"
   $ python detectvideo.py --weights ./checkpoints/yolov4-416-test --size 416 --model yolov4 --video ~/Videos/dwelling.mp4 
   ~~~
 
-  <img src="images/tensorflow-yolov4-ouput2.png" alt="image-output" align="left" style="zoom:67%;" />
+  <img src="images/tensorflow-yolov4-output.png" alt="image-20210222161048521" align="left" style="zoom:67%;" />
 
 ---
 
