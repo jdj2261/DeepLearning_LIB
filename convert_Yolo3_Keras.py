@@ -24,56 +24,56 @@ def changeName(path, cName):
 
 changeName(path, change_name)
 
-def make_train_file(path):
-    file_list = os.listdir(path)
-    natsorted_files = natsort.natsorted(file_list, reverse=False)
-    # print(natsorted_files)
-    result_list = []
-    red_count = 0
-    green_count = 0
-    for i, file in enumerate(natsorted_files):
-        with open(path+file, "r") as f:
-            test = str(file)
-            while True:
-                data = f.readline().strip('\n')
-                if data == '':
-                    break
-                else:
-                    data = data.split('\t')
-                    print(file, data)
-                    class_data = data[4]
-                    if class_data == '1301' or class_data == '1401':
-                        data[4] = '1' #'traffic_red'
-                        red_count += 1
-                    elif class_data == '1300' or class_data == '1400':
-                        data[4] = '0' #'traffic_green'
-                        green_count += 1
-                    else:
-                        continue
-                    result_list.append(test.replace('txt','jpg ') + ','.join(data).rstrip())
-    print("red: {}, green: {}".format(red_count, green_count))
+# def make_train_file(path):
+#     file_list = os.listdir(path)
+#     natsorted_files = natsort.natsorted(file_list, reverse=False)
+#     # print(natsorted_files)
+#     result_list = []
+#     red_count = 0
+#     green_count = 0
+#     for i, file in enumerate(natsorted_files):
+#         with open(path+file, "r") as f:
+#             test = str(file)
+#             while True:
+#                 data = f.readline().strip('\n')
+#                 if data == '':
+#                     break
+#                 else:
+#                     data = data.split('\t')
+#                     print(file, data)
+#                     class_data = data[4]
+#                     if class_data == '1301' or class_data == '1401':
+#                         data[4] = '1' #'traffic_red'
+#                         red_count += 1
+#                     elif class_data == '1300' or class_data == '1400':
+#                         data[4] = '0' #'traffic_green'
+#                         green_count += 1
+#                     else:
+#                         continue
+#                     result_list.append(test.replace('txt','jpg ') + ','.join(data).rstrip())
+#     print("red: {}, green: {}".format(red_count, green_count))
 
-    with open(path+'../train.txt', 'w') as train_file:
-        for file in result_list:
-            train_file.write(file + "\n") 
+#     with open(path+'../train.txt', 'w') as train_file:
+#         for file in result_list:
+#             train_file.write(file + "\n") 
 
-def copy_img(path):
-    train_text_list = []
-    with open(path+'../train.txt', 'r') as train_file:
-        for text in train_file:
-            list = text.split(' ')
-            train_text_list.append(list[0])
-    # print(train_text_list)
+# def copy_img(path):
+#     train_text_list = []
+#     with open(path+'../train.txt', 'r') as train_file:
+#         for text in train_file:
+#             list = text.split(' ')
+#             train_text_list.append(list[0])
+#     # print(train_text_list)
 
-    img_path = '/home/djjin/Mygit/My_Python_LIB/ETRI/JPEGImages_mosaic'
-    copy_path = '/home/djjin/Mygit/My_Python_LIB/ETRI/img_test'
-    img_file_list = os.listdir(img_path)
-    natsorted_files = natsort.natsorted(img_file_list,reverse=False)
+#     img_path = '/home/djjin/Mygit/My_Python_LIB/ETRI/JPEGImages_mosaic'
+#     copy_path = '/home/djjin/Mygit/My_Python_LIB/ETRI/img_test'
+#     img_file_list = os.listdir(img_path)
+#     natsorted_files = natsort.natsorted(img_file_list,reverse=False)
 
-    for file in natsorted_files:
-        if file in train_text_list:
-            print(file)
-            sh.copy(img_path+file, copy_path)
+#     for file in natsorted_files:
+#         if file in train_text_list:
+#             print(file)
+#             sh.copy(img_path+file, copy_path)
 
 # current_path = os.getcwd()
 # os.chdir(current_path + "/ETRI")
