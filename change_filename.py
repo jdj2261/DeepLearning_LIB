@@ -42,7 +42,7 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    path = ''.join(args.change)
+    path = ''.join(args.change) + '/'
     changed_filename = ''.join(args.after)
     input_type = '.'+''.join(args.type)
     changeName(path, changed_filename, input_type)
