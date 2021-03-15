@@ -3,3 +3,5 @@ ETRI
 *.avi
 *.mp4
 *.pyc
+__pycache__
+.vscode
