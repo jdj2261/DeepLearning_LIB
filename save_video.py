@@ -103,3 +103,5 @@ if __name__ == '__main__':
 
     # input_list = args.img2video
     save_video(args)
+
+# python3 save_video.py --webcam 2 --output /home/djjin/output.mp4
