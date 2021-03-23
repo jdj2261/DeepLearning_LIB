@@ -1,0 +1,1 @@
+[{"class_name": "bird", "bbox": "309 165 330 206", "used": true}, {"class_name": "car", "bbox": "345 1 392 12", "used": true}, {"class_name": "car", "bbox": "221 9 247 14", "used": false}]

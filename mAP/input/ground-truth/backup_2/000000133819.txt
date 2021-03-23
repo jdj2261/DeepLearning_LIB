@@ -1,0 +1,15 @@
+person 99 210 121 278
+person 27 212 56 246
+person 67 208 91 284
+person 62 213 76 244
+person 47 209 64 244
+person 1 211 24 246
+person 95 212 104 240
+person 491 211 510 233
+person 470 207 491 235
+traffic_light 65 116 93 180
+traffic_light 550 4 594 77
+traffic_light 100 133 121 182
+person 503 203 520 230
+person 436 206 460 237
+traffic_light 302 212 308 221

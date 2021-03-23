@@ -1,0 +1,55 @@
+Total BFLOPS 65.864 
+
+ seen 64 
+Enter Image Path: data/horses.jpg: Predicted in 42.076185 seconds.
+horse: 88%	(left_x:    3   top_y:  185   width:  150   height:  167)
+horse: 99%	(left_x:    5   top_y:  198   width:  307   height:  214)
+horse: 96%	(left_x:  236   top_y:  180   width:  215   height:  169)
+horse: 99%	(left_x:  440   top_y:  209   width:  156   height:  142)
+Enter Image Path: data/person.jpg: Predicted in 41.767213 seconds.
+dog: 99%	(left_x:   58   top_y:  262   width:  147   height:   89)
+person: 100%	(left_x:  190   top_y:   95   width:   86   height:  284)
+horse: 100%	(left_x:  394   top_y:  137   width:  215   height:  206)
+Enter Image Path: 
+
+
+ seen 64
+Enter Image Path: /home/djjin/Downloads/coco/val2017/000000000724.jpg: Predicted in 27.107000 milli-seconds.
+car: 44%	(left_x:  119   top_y:  281   width:   26   height:   26)
+truck: 87%	(left_x:  120   top_y:  280   width:   25   height:   30)
+Enter Image Path: /home/djjin/Downloads/coco/val2017/000000000785.jpg: Predicted in 28.613000 milli-seconds.
+person: 99%	(left_x:  283   top_y:   57   width:  214   height:  317)
+Enter Image Path:  /home/djjin/Downloads/coco/val2017/000000000872.jpg: Predicted in 27.105000 milli-seconds.
+person: 100%	(left_x:  166   top_y:  120   width:  256   height:  474)
+Enter Image Path:  /home/djjin/Downloads/coco/val2017/000000000885.jpg: Predicted in 27.115000 milli-seconds.
+person: 41%	(left_x:    4   top_y:   -0   width:   56   height:   10)
+person: 31%	(left_x:   47   top_y:    0   width:   90   height:    8)
+person: 26%	(left_x:  107   top_y:   -0   width:   71   height:   10)
+person: 61%	(left_x:  267   top_y:    0   width:   65   height:   13)
+person: 100%	(left_x:  268   top_y:  100   width:  126   height:  144)
+person: 99%	(left_x:  287   top_y:  192   width:  130   height:  201)
+person: 51%	(left_x:  355   top_y:   -0   width:   41   height:   13)
+person: 59%	(left_x:  419   top_y:   -1   width:   44   height:   15)
+person: 38%	(left_x:  460   top_y:   -0   width:   47   height:   14)
+person: 39%	(left_x:  503   top_y:   -1   width:   45   height:   15)
+person: 28%	(left_x:  537   top_y:    0   width:   83   height:   14)
+person: 94%	(left_x:  598   top_y:   33   width:   40   height:  215)
+Enter Image Path: /home/djjin/Downloads/coco/val2017/000000001000.jpg: Predicted in 27.136000 milli-seconds.
+person: 99%	(left_x:   46   top_y:  188   width:   64   height:  199)
+person: 100%	(left_x:  125   top_y:  162   width:   56   height:  212)
+person: 92%	(left_x:  197   top_y:  129   width:   66   height:  244)
+person: 100%	(left_x:  219   top_y:  180   width:   71   height:  245)
+person: 99%	(left_x:  273   top_y:  132   width:   71   height:  230)
+person: 99%	(left_x:  335   top_y:  159   width:   73   height:  299)
+person: 100%	(left_x:  351   top_y:  121   width:   53   height:   41)
+person: 97%	(left_x:  395   top_y:  175   width:   60   height:  298)
+person: 97%	(left_x:  404   top_y:  119   width:   41   height:   46)
+person: 100%	(left_x:  420   top_y:  210   width:   93   height:  270)
+person: 100%	(left_x:  421   top_y:  119   width:   71   height:   98)
+person: 98%	(left_x:  512   top_y:  189   width:  123   height:  294)
+Enter Image Path: /home/djjin/Downloads/coco/val2017/000000001268.jpg: Predicted in 24.928000 milli-seconds.
+person: 98%	(left_x:   -1   top_y:  217   width:   28   height:   65)
+person: 97%	(left_x:   19   top_y:  215   width:   57   height:   71)
+bird: 97%	(left_x:  188   top_y:  229   width:   84   height:   23)
+person: 100%	(left_x:  400   top_y:  206   width:   65   height:   86)
+person: 99%	(left_x:  488   top_y:   94   width:  155   height:  314)

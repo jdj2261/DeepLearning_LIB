@@ -1,0 +1,12 @@
+bicycle 188 6 499 387
+car 398 81 480 118
+car 149 72 241 116
+traffic_light 110 27 118 39
+traffic_light 96 68 103 76
+car 365 87 396 111
+car 82 77 109 95
+car 123 80 133 94
+truck 506 26 640 138
+truck 397 81 479 117
+truck 477 82 521 121
+traffic_light 33 59 38 62

@@ -1,0 +1,10 @@
+person 222 42 410 262
+person 463 31 633 267
+car 54 2 267 86
+car 1 1 64 67
+bicycle 287 24 348 86
+person 529 72 638 259
+bicycle 220 4 393 89
+bicycle 464 1 596 95
+car 468 43 507 94
+bicycle 597 1 641 97

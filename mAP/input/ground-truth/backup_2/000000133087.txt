@@ -1,0 +1,4 @@
+traffic_light 475 67 514 162
+traffic_light 152 131 178 192
+traffic_light 95 132 123 193
+traffic_light 438 75 465 132

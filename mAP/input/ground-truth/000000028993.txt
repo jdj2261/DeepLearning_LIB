@@ -1,0 +1,12 @@
+traffic_light 95 226 103 234
+traffic_light 93 244 98 249
+traffic_light 55 240 62 248
+person 146 244 157 272
+person 63 246 74 274
+person 93 251 101 273
+person 100 249 108 273
+person 115 248 122 272
+person 135 245 146 272
+person 30 240 43 277
+person 55 254 63 273
+person 126 248 133 273

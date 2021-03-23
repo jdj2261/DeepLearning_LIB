@@ -1,0 +1,5 @@
+person 55 277 80 333
+traffic_light 545 200 567 236
+traffic_light 447 140 462 157
+traffic_light 136 242 148 253
+traffic_light 468 137 485 153

@@ -1,0 +1,12 @@
+person 0.9 -1 212 19 252
+person 0.86 28 213 50 248
+person 0.98 46 209 63 243
+traffic_light 0.97 60 113 89 186
+person 0.4 63 207 91 278
+person 0.38 65 207 88 242
+traffic_light 0.59 97 130 120 184
+person 0.92 99 208 121 278
+person 0.77 433 205 459 239
+person 0.44 463 206 493 235
+person 0.79 500 202 521 232
+traffic_light 0.94 545 -2 590 75

@@ -1,0 +1,6 @@
+bicycle 423 241 449 282
+person 372 208 411 352
+traffic_light 434 128 446 152
+traffic_light 625 160 633 169
+person 625 224 639 261
+traffic_light 283 187 291 196

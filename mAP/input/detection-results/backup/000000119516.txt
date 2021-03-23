@@ -1,0 +1,6 @@
+traffic_light 0.51 67 138 90 180
+traffic_light 0.69 282 185 293 195
+person 0.93 370 201 410 361
+bicycle 0.92 420 238 448 286
+traffic_light 0.77 433 128 444 148
+person 0.56 627 225 640 259

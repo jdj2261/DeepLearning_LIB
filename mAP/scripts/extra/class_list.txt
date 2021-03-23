@@ -1,0 +1,8 @@
+person
+bicycle
+car
+truck
+traffic_light
+bird
+cat
+dog

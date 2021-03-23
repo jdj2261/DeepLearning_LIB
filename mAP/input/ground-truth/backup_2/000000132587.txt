@@ -1,0 +1,7 @@
+person 15 17 313 406
+person 503 1 545 71
+person 313 1 368 85
+person 1 127 17 158
+bird 1 74 13 88
+person 247 1 289 46
+person 233 1 266 36

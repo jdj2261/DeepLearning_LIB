@@ -1,0 +1,5 @@
+bicycle 597 34 641 69
+bicycle 496 52 536 72
+person 582 44 598 68
+person 571 47 583 68
+person 555 51 577 72
