@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+Created Date: March 25. 2021
+Copyright: UNMANNED SOLUTION
+Author: Dae Jong Jin 
+Description: Convert video file to image files
+
+@example
+python3 video2img.py --video2img $(video name) $(image directory path) $(file_type)
+python3 video2img.py --video2img ~/Test/test4/output.mp4 ~/Test/test4/img jpg
+'''
+
 import cv2
 import argparse
 from datetime import datetime
@@ -17,7 +31,7 @@ def video2img(*input):
         return
 
     videoFile = input[0] 
-    save_path = input[1]
+    save_path = input[1] + "/"
     file_type = input[2]
 
     cam = cv2.VideoCapture(videoFile)

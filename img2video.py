@@ -1,4 +1,17 @@
-from video2img import video2img
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+Created Date: March 25. 2021
+Copyright: UNMANNED SOLUTION
+Author: Dae Jong Jin 
+Description: Convert img files to video file
+
+@example
+python3 img2video.py --img2video $(image directory_path) $(video output_name) $(frame_rate)
+python3 img2video.py --img2video ~/Test/test test_output.mp4 30
+'''
+
 import cv2
 import os
 import natsort # pip3 install natsort
@@ -46,7 +59,7 @@ if __name__ == '__main__':
     '''
     parser.add_argument(
         '-i2v', '--img2video', type=str, required=False, nargs='+',
-        help='--img2video imaeg_path output_name frame_rate'
+        help='--img2video image_path output_name frame_rate'
     )
 
     args = parser.parse_args()

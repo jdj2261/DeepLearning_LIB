@@ -1,5 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+Created Date: March 25. 2021
+Copyright: UNMANNED SOLUTION
+Author: Dae Jong Jin 
+Description: Copy or Move all files in the desired directory
+
+@example
+python3 file_processing.py --copy or --move $(current path) $(desired path) $(file type)
+python3 file_processing.py --copy ~/Videos /home/djjin/test mp4
+'''
+
 import glob
-from os.path import dirname
 import shutil as sh
 import os
 import natsort
@@ -99,7 +112,7 @@ if __name__ == '__main__':
         isCopy = True
     elif "move" in args:
         input_list = args.move
-
+    print(input_list)
     cur_path = input_list[0]
     tar_path = input_list[1]
 

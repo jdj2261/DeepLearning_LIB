@@ -1,3 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+Created Date: March 25. 2021
+Copyright: UNMANNED SOLUTION
+Author: Dae Jong Jin 
+Description: Crop video 
+
+@example
+python3 crop_video.py --crop video_path start_time end_time output_name
+python3 crop_video.py --crop input.mp4 00:00:01 00:00:02 output.mp4
+'''
+
+
 #ffmpeg -i input.mp4 -ss 00:00:10 -to 00:00:20 -c copy output.mp4
 import os
 import argparse
@@ -23,7 +38,7 @@ def crop_video(*input):
     os.system(cmd)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)
+    parser = argparse.ArgumentParser(description="crop the video")
     '''
     Command line options
     '''

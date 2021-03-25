@@ -1,5 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+Created Date: March 25. 2021
+Copyright: UNMANNED SOLUTION
+Author: Dae Jong Jin 
+Description: Split target txt or jpg file to train.txt and valid.txt
+
+@example
+python3 split_file.py --split $(directory path) $(desired directory path) $(Related file type) $(percentage)
+python3 split_file.py -sp ~/Mygit/My_Python_LIB/ETRI/img_test test jpg 80
+'''
 import glob
-from os.path import dirname
 import random
 import argparse
 import os

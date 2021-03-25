@@ -1,8 +1,22 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+Created Date: March 25. 2021
+Copyright: UNMANNED SOLUTION
+Author: Dae Jong Jin 
+Description: make train.txt file about COCO
+
+@example
+python3 make_coco_train_text.py --make_train $(directory path)
+python3 make_coco_train_text.py -mt ~/Documents/output
+'''
+
 import os
 import natsort
 import argparse
 
-def make_train_file(*input):
+def make_coco_train_file(*input):
 
     help_str="""
     example
@@ -54,4 +68,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     input_list = args.make_train
-    make_train_file(*input_list)
+    make_coco_train_file(*input_list)
