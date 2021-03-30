@@ -29,6 +29,7 @@ Description: mAP 깃 레포지토리에서 실행될 수 있도록 darknet resul
 python3 convert_yolov4_result.py --convert_result ~/test/result.txt 
 """
 import argparse
+import os
 
 SEPARATOR_KEY = "Enter Image Path:"
 REMOVE_KEY = "Detection layer:"
@@ -37,14 +38,15 @@ IMG_FORMAT = ".jpg"
 def convert_result_txt(*input):
     file_name = input[0]
 
+    path, ext = os.path.splitext(file_name)
+
     with open(file_name, "r") as f:
         lines = f.readlines()
-
-    with open(file_name, "w") as f:
+    with open(path + "_modified" + ext, "w") as f:
         for line in lines:
             data = line.lstrip()
-            if SEPARATOR_KEY in line:
-                data = data.replace(data,SEPARATOR_KEY)
+            if SEPARATOR_KEY in data:
+                data = line.replace(data,SEPARATOR_KEY)
                 print(data)
             else:
                 if REMOVE_KEY in data:
