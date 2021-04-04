@@ -175,9 +175,11 @@ $ python3 yolov3_keras_demo.py --image ~/Test/merge/images/test_000405.jpg
 
 <img src="images/image_result.png" align="left" alt="image-20210224160149607" style="zoom:67%;" width="800"/>
 
-
-
----
+> python3 yolov3_keras_demo.py 
+>
+> > --image image_path
+>
+> > --video video_path
 
 #### 7-2. 비디오 실행
 
@@ -185,7 +187,7 @@ $ python3 yolov3_keras_demo.py --image ~/Test/merge/images/test_000405.jpg
 $ python3 yolov3_keras_demo.py --video ~/Videos/dwelling.mp4
 ~~~
 
-<img src="images/video_result.png" alt="image-20210224160259809" align="left" style="zoom: 80%;" width="800"/>
+<img src="images/video_result.png" alt="image-20210224160259809" align="left" style="zoom: 80%;" width="600"/>
 
 
 
