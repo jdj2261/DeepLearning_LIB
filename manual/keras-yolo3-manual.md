@@ -173,7 +173,7 @@ $ python3 train.py
 $ python3 yolov3_keras_demo.py --image ~/Test/merge/images/test_000405.jpg 
 ~~~
 
-<img src="images/image_result.png" align="left" alt="image-20210224160149607" style="zoom:67%;" width="800"/>
+<img src="images/image_result.png" align="left" alt="image-20210224160149607"/>
 
 > python3 yolov3_keras_demo.py 
 >
