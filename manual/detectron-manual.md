@@ -64,7 +64,7 @@ $ cd detectron2/demo
   $ python demo.py --config-file ../configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml --input ~/Test/merge/images/test_000322.jpg  --opts MODEL.WEIGHTS ../model/model_final_f10217.pkl
   ~~~
 
-  <img src="image/demo-image.png" alt="image-20210302195110816" style="zoom:67%;" width="600" />
+  <img src="images/demo-image.png" alt="image-20210302195110816" style="zoom:67%;" width="600" />
 
 - Video
 
