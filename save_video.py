@@ -27,6 +27,8 @@ def save_video(args: list) -> None:
     elif args.video:
         video_path = args.video
         cap = cv2.VideoCapture(video_path) # 0, 2, 6
+        
+    assert cap.isOpened(), 'Cannot capture source'
 
     if args.output:
         output_name = args.output

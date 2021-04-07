@@ -23,10 +23,9 @@ SEARCH_KEY = "_modified"
 class ETRI2YOLO:
     def __init__(self, *input) -> None:
         self.path = input[0]
-        self.data = ()
         self.class_data = None
     
-    def run(self):
+    def run(self) -> None:
         file_list = os.listdir(self.path)
         natsorted_files = natsort.natsorted(file_list, reverse=False)
         self.process_file(natsorted_files)
