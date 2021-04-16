@@ -72,7 +72,7 @@ pytorch-yolo-v3 설치 및 데모 실행하기
 
   따라서, 입력 이미지를 13x13으로 나눈다.
 
-  <img src="img/yolo_part1_1.png" alt="image-20210315162334903" style="zoom: 80%;" />
+  <img src="../img/yolo_part1_1.png" alt="image-20210315162334903" style="zoom: 80%;" />
 
 - 이후, object의 ground truth box 중심을 포함한 cell은 object를 예측하는 대상으로 선정이 된다.
 
@@ -81,7 +81,7 @@ pytorch-yolo-v3 설치 및 데모 실행하기
   빨간 cell은 grid의 (7,7)에 위치하고 이 cell을 feature map에서 개를 detect하는 것을 책임지는 cell로 지정한다.
 
 - 이 cell은 총 3개의 bounding box를 예측할 수 있다. 그렇다면, 어떤 box가 개의 ground truth label로 배정 될까?
-
+0.
   이 질문을 이해하기 위해 anchors에 대한 개념을 짚고 넘어가자.
 
 ### 1-4. Anchor Boxes
@@ -96,9 +96,9 @@ pytorch-yolo-v3 설치 및 데모 실행하기
 
 ### 1-5. Making Predictions
 
-![YOLO Equations](img/yolo_part1_2.png)
+![YOLO Equations](../img/yolo_part1_2.png)
 
-![image-20210315164340507](/home/djjin/.config/Typora/typora-user-images/image-20210315164340507.png)
+![image-20210315164340507](../img/yolo_part1_3.png)
 
 - *bx, by, bw, bh* 는 prediction의 x,y의 중심 좌표, 너비와 높이이다. tx, ty, tw, th는 네트워크의 출력이다. cx and cy 는 grid의 왼쪽 위 좌표이다. pw 와 ph는 box의 anchor dimension이다.
 
@@ -160,7 +160,7 @@ pytorch-yolo-v3 설치 및 데모 실행하기
 
 - 각 scale에서 각 cell들은 3개의 anchor를 사용하여 3개의 bounding box를 예측한다. 따라서 anchor 총 합은 9가 된다. (anchor는 scale에 따라 다름.)
 
-  ![image-20210316104453632](/home/djjin/.config/Typora/typora-user-images/image-20210316104453632.png)
+  ![image-20210316104453632](../img/yolo_part1_4.png)
 
 ### 1-7. Output Processing
 
@@ -180,7 +180,7 @@ pytorch-yolo-v3 설치 및 데모 실행하기
 
   예를 들어, 빨간 grid cell의 3개의 bounding box 모두가 box를 detect 할 수 있고, 인접한 cell이 동일한 object를 detection할 수 있다.
 
-  ![image-20210316105947548](/home/djjin/.config/Typora/typora-user-images/image-20210316105947548.png)
+  ![image-20210316105947548](../img/yolo_part1_5.png)
 
 ## 2. Our Implementation
 
