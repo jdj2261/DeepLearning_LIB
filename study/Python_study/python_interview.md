@@ -2,9 +2,9 @@
 
 [[100 Essential Python Interview]](https://www.techbeamers.com/python-interview-questions-programmers/) 를 중심으로 정리할 예정이며 중요하다고 생각되는 것 위주로 정리하고자 합니다.
 
-한재엽님의 [Interview_Question_for_Beginner/Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python) 과 [python_study](https://github.com/yeomko22/python_study/blob/master/week2_decorator.ipynb) 를 참고하여 파이썬 코드를 작성하려 합니다.
+이후에 한재엽님의 [Interview_Question_for_Beginner/Python](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Python) 과 [python_study](https://github.com/yeomko22/python_study/blob/master/week2_decorator.ipynb) 를 참고하여 
 
-
+알아야 할 또는 알면 좋을 파이썬 코드를 작성하려 합니다.
 
 ## 1. 100가지의 파이썬 필수 질문
 
@@ -86,7 +86,7 @@
 
 ~~~python
 def print_items(items):
-	# Doctsring (print_items.__doc__)
+# Doctsring (print_items.__doc__)
     """
     items를 print
     :param items: 
@@ -108,7 +108,7 @@ def print_items(items):
 </details>
 
 <details>
-  <summary>Q-27. Call by Value란?
+  <summary>Q-27. Call by value란?
     </summary>
 
 - 표현식 또는 값이 함수의 각 변수에 바인딩되는지 여부를 나타내는 인수
@@ -117,7 +117,7 @@ def print_items(items):
 </details>
 
 <details>
-  <summary>Q-28. call by reference란?
+  <summary>Q-28. Call by reference란?
     </summary>
 
 - 참조로 인수를 전달하면 단순 복사가 아닌 함수에 대한 암시적 참조로 사용됨.
@@ -127,7 +127,7 @@ def print_items(items):
 </details>
 
 <details>
-  <summary>Q-33. *Args는 무엇을 하는가?
+  <summary>Q-33. *args는 무엇을 하는가?
     </summary>
 
 - N개의 매개변수를 넘기겠다.
@@ -207,7 +207,7 @@ def print_items(items):
     </summary>
 
 - 모든 객체와 자료구조를 가지고 있는 힙 관리자가 내부적으로 구현되어 있음.
-- 이 힙 관리자는 객체애 대한 힙 공간 할당, 할당 해제를 수행함.
+- 이 힙 관리자는 객체에 대한 힙 공간 할당, 할당 해제를 수행함.
 
 </details>
 
@@ -251,8 +251,6 @@ def print_items(items):
 
 - 상속의 한 종류로 기본 클래스에서 상속을 하지만 파생 클래스의 멤버 역할을 하는 기본 클래스의 인스턴스 변수를 사용
 
-- 내부적으로 다른 객체를 참조하기 위한 연속적인 배열을 가지며, 배열 변수에 대한 포인터와 그 길이를 리스트 헤더에 저장
-
   ~~~python
   class PC: # Base class
       processor = "Xeon" # Common attribute
@@ -279,6 +277,7 @@ def print_items(items):
       tab = Tablet("i7", "16 GB", "Intel")
       print(tab.get_Tablet())
   ~~~
+
 
 </details>
 
@@ -420,14 +419,26 @@ Enter an odd number-
     </summary>
 
 - copy.copy()
+
   - 얕은 복사는 새로운 객체(변수)를 만든 후에 원본에 접근할 수 있는 참조(reference)를 입력한다.
+
     👉🏽 이런 경우 서로 다른 변수명이지만 본질적으로 서로 같은 대상을 의미하므로 하나의 변수 역시 수정이 된다.
+
   - 가변형(mutable) 자료형에 대해서 적용이 가능하다.
+
     👉🏽 가변형(mutable) 자료형은 같은 주소에서 값(value)이 변경 가능하기 때문에 얕은 복사가 가능하다.
+
     👉🏽 불변형(immutable) 자료형은 본질적으로 변경이 불가능하므로 재배정을 통해 변수를 바꾼다. 따라서 재배정이 이루어지므로 객체가 서로 달라진다.
+
 - copy.deepcopy()
+
   - 깊은 복사는 내부에 객체들까지 모두 새롭게 copy 되는 것
+
   - 깊은 복사는 새로운 객체(변수)를 만든 뒤에 원본의 복사본을 변수에 입력한다.
-    👉🏽 서로 값만 같을 뿐 본질적으로 서로 다르기 때문에 한 변수가 수정될 시 다은 변수가 수정되지 않는다.
+
+    👉🏽 서로 값만 같을 뿐 본질적으로 서로 다르기 때문에 한 변수가 수정될 시 다음 변수가 수정되지 않는다.
 
 </details>
+
+## 2. Interview_Question_for_beginner(Python)
+

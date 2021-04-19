@@ -57,9 +57,17 @@ def randnum_yield():
 
 yield_result = randnum_yield()
 print(yield_result)
-print(next(yield_result))
-print(next(yield_result))
-print(next(yield_result))
+for i in range(3):
+    print(f'step {i+1}: {next(yield_result)}')
+
+"""
+<generator object randnum_yield at 0x7fa086a84e08>
+step 1: 74
+hello
+step 2: 74
+hello
+step 3: 74
+"""
 
 def square_generator(nums):
     for num in nums:
