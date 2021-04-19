@@ -3,7 +3,6 @@
 
 '''
 Created Date: March 25. 2021
-Copyright: UNMANNED SOLUTION
 Author: Dae Jong Jin 
 Description: Copy or Move all files in the desired directory
 

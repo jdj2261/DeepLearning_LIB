@@ -3,7 +3,6 @@
 
 '''
 Created Date: March 25. 2021
-Copyright: UNMANNED SOLUTION
 Author: Dae Jong Jin 
 Description: Split target txt or jpg file to train.txt and valid.txt
 

@@ -3,10 +3,8 @@
 
 '''
 Created Date: April 6. 2021
-Copyright: UNMANNED SOLUTION
 Author: Dae Jong Jin
-Description: 에트리 데이터 셋을 Yolo 어노테이션 형태로 변환 
-             (디렉토리 안에 이미지와 텍스트 파일이 존재 해야함)
+Description: 에트리 데이터 셋을 Yolo 어노테이션 형태로 변환 (디렉토리 안에 이미지와 텍스트 파일이 존재 해야함)
 
 @example
 python3 convert_ETRI_to_yolo.py --convert_yolo $(directory path)
