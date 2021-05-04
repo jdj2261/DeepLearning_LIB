@@ -3,7 +3,6 @@
 
 '''
 Created Date: March 25. 2021
-Copyright: UNMANNED SOLUTION
 Author: Dae Jong Jin 
 Description: Convert video file to image files
 

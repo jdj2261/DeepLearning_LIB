@@ -21,7 +21,6 @@
 
 """
 Created Date: March 25. 2021
-Copyright: UNMANNED SOLUTION
 Author: Dae Jong Jin 
 Description: mAP 깃 레포지토리에서 실행될 수 있도록 darknet result.txt 파일 형식을 변환
 

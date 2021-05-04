@@ -3,7 +3,6 @@
 
 '''
 Created Date: March 25. 2021
-Copyright: UNMANNED SOLUTION
 Author: Dae Jong Jin 
 Description: coco class name change ( traffic light -> traffic_light )
 
